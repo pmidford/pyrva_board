@@ -136,20 +136,15 @@
     <div class="second row">
       <div class="col-sm-12">
         <h3>Jobs</h3><br />
-        <div class="jorb">
-          <h4><b>Job title</b> at Company</h4>
-          <p><small>Posted on April 13th, 2016 at 8:15 P.M. GMT.</small></p><br />
-          <p>This is a really short description.</p>
-          <p>Posted by <a href="#">User</a>.</p>
-          <hr />
-        </div>
-        <div class="jorb">
-          <h4><b>{{ title }}</b> at {{ company }}</h4>
-          <p><small>Posted on {{ post_date }}.</small></p><br />
-          <p>{{ description }}</p>
-          <p>Posted by <a href="#">{{ user }}</a>.</p>
-          <hr />
-        </div>
+	{% for post in posts %}
+          <div class="jorb">
+            <h4><b>{{post['title']}}</b> at {{post['company']}}</h4>
+            <p><small>Posted on {{post['posted']}}.</small></p><br />
+            <p>{{post['description']}}</p>
+            <p>Posted by <a href="#">{{post['submitter']}}</a>.</p>
+            <hr />
+          </div>
+	{% endfor %}
       </div>
     </div>
   <div class="row meee">

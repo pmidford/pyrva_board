@@ -25,9 +25,9 @@ tests_require = [
     'pytest-cov',
     ]
 
-setup(name='pyrva_jobs',
+setup(name='job_board',
       version='0.0',
-      description='pyrva_jobs',
+      description='job_board',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
           "Programming Language :: Python",
